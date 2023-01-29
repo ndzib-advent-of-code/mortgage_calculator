@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="#">
+        <h1>
+            Mortgage Calculator
+        </h1>
+        <section class="inputs">
+            <div class="form-field">
+                <label class="input-label" for="purchasePrice">Purchase price: <span>XAF</span> <span id="purchasePrice-value">450,000,000</span></label>
+                <input value="0" class="input-field" step="100" max="999999999" type="range" name="purchasePrice" id="purchasePrice">
+            </div>
+
+            <div class="form-field">
+                <label class="input-label" for="equity">Equity: <span>XAF</span> <span id="equity-value">4500</span></label>
+                <input value="0" class="input-field" step="100" max="999999999" type="range" name="equity" id="equity">
+            </div>
+
+            <div class="form-field">
+                <label class="input-label" for="repaymentTime">Repayment time: <span id="repaymentTime-value">20</span> <span>years</span></label>
+                <input value="0" class="input-field" step="1" max="30" type="range" name="repaymentTime" id="repaymentTime">
+            </div>
+        </section>
+        <section class="summary">
+            <div class="card">
+                <h4 class="card-title">Loan Amount</h4>
+                <p class="card-body">XAF 315,000</p>
+            </div>
+
+            <div class="card">
+                <h4 class="card-title">Loan Amount</h4>
+                <p class="card-body">XAF 315,000</p>
+                <p class="card-footer">2.10% eff./2.4% nrom. interest</p>
+            </div>
+        </section>
+
+        <section>
+            <button>Get a mortgage quote</button>
+        </section>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

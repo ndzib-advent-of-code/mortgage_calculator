@@ -1,0 +1,191 @@
+:root {
+    --slider-track-height: 1rem;
+    --slider-thumb-height: 1rem;
+    --slider-thumb-width: 1rem;
+    --blue : #5667FF;
+    --slider-position: 20%;
+    --blue-light: #909BFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDEEF6;
+    color: #20253C;
+}
+
+form {
+    padding: 5rem 3.5rem;
+    border-radius: 1.5rem;
+    max-width: fit-content;
+    border: 1.4rem solid white;
+    border-collapse: separate;
+}
+
+section {
+    margin-top: 3rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    margin-top: 1rem;
+}
+
+.summary, .inputs {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.inputs > * , .summary > * {
+    width: 25rem;
+}
+
+.card {}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card-body {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: .6rem 0 .2rem;
+}
+
+.card-footer {
+    font-size: 1.2rem;
+    opacity: .7;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    background-color: var(--blue);
+    color: white;
+}
+
+label {
+    font-size: 1.4rem;
+}
+
+label > span {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 500rem;
+    background-color: white;
+}
+
+
+/*STYLING THE TRACK*/
+input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--slider-track-height);
+    border-radius: 500rem;
+}
+
+input[type="range"]::-moz-range-track {
+    height: var(--slider-track-height);
+    border-radius: 500rem;
+}
+
+/*STYLING THE THUMB*/
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-appearance: none;
+    height: 2rem ;
+    /* var(--slider-thumb-height); */
+    width: 2rem;
+    /* var(--slider-thumb-width); */
+    margin-top: -.5rem;
+    border-radius: 500rem;
+
+    border: .5rem solid var(--blue);
+    background-color: white;
+}
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: var(--slider-thumb-height);
+    width: var(--slider-thumb-width);
+    margin-top: -.5rem;
+    border-radius: 500rem;
+
+    border: 1rem solid var(--blue);
+    background-color: white;
+}
+
+/* FOCUS */
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    outline: .15rem solid rgba(255, 255, 255, .4);
+    outline-offset: .125rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+    outline: .15rem solid rgba(255, 255, 255, .4);
+    outline-offset: .125rem;
+}
+
+
+input[type="range"]::-ms-fill-lower {
+    background-color: var(--blue-light);
+    border-radius: 500rem;
+    height: 100%;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: var(--blue-light);
+    border-radius: 500rem;
+    height: 100%;
+}
+
+/*@TODO need to style the fill for chrome*/
+#purchasePrice::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--blue-light) var(--purchasePrice-position), transparent var(--purchasePrice-position))
+}
+
+#equity::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--blue-light) var(--equity-position), transparent var(--equity-position))
+}
+
+#repaymentTime::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--blue-light) var(--repaymentTime-position), transparent var(--repaymentTime-position))
+}
